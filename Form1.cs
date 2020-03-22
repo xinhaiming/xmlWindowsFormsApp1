@@ -46,19 +46,19 @@ namespace xmlWindowsFormsApp1
                   </row>
                  </DrugInfoList>
                 </function>";
-
-           // XElement xe = XElement.Parse(xml);
-           //string outc= xe.Element("function_id").Value;
-           // string text = xe.Element("rows").Value;
-           // IEnumerable<string> dr = xe.Descendants("drugName").Select(x => x.Value);
-           // textBox1.Text = outc;
-           // textBox1.Text += text;
-           // //MessageBox.Show(outc);
-           // //MessageBox.Show(text);
-           // foreach (var item in dr)
-           // {
-           //     textBox1.Text += item;
-           // }
+            
+            XElement xe = XElement.Parse(xml);
+            string outc = xe.Element("function_id").Value;
+            string text = xe.Element("rows").Value;
+            IEnumerable<string> dr = xe.Descendants("drugName").Select(x => x.Value);
+            textBox1.Text = outc;
+            textBox1.Text += text;
+            //MessageBox.Show(outc);
+            //MessageBox.Show(text);
+            foreach (var item in dr)
+            {
+                textBox1.Text += item;
+            }
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(xml);
@@ -67,7 +67,7 @@ namespace xmlWindowsFormsApp1
 
             foreach (XmlNode item in xmlNode)
             {
-                MessageBox.Show(item.InnerText);
+                textBox1.Text += item.InnerText + Environment.NewLine;
             }
            
         

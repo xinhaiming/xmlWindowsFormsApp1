@@ -34,11 +34,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(332, 337);
+            this.button1.Location = new System.Drawing.Point(316, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 29);
             this.button1.TabIndex = 0;
-            this.button1.Text = "解析文档";
+            this.button1.Text = "解析Xml文档";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
